@@ -20,6 +20,7 @@ public class mikay extends javax.swing.JFrame {
 
     public mikay() {
         initComponents();
+        setLocationRelativeTo (null);
  model = (DefaultTableModel) Cart.getModel();
         model.setRowCount(0);
     }
@@ -33,7 +34,8 @@ public class mikay extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        jPanel4 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         B1 = new javax.swing.JButton();
@@ -61,19 +63,19 @@ public class mikay extends javax.swing.JFrame {
         P5 = new javax.swing.JLabel();
         P6 = new javax.swing.JLabel();
         P7 = new javax.swing.JLabel();
+        Quantity = new javax.swing.JTextField();
+        BB1 = new javax.swing.JButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        items = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         Cart = new javax.swing.JTable();
-        BB1 = new javax.swing.JButton();
-        Quantity = new javax.swing.JTextField();
-        items = new javax.swing.JComboBox<>();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Ravie", 3, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 153, 255));
-        jLabel1.setText("MIKAY'S ICE CREAM HOUSE");
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 102, 102), new java.awt.Color(153, 153, 255), new java.awt.Color(102, 102, 102), new java.awt.Color(153, 153, 255)));
 
@@ -144,7 +146,7 @@ public class mikay extends javax.swing.JFrame {
                     .addComponent(B6, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(B7, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,9 +166,11 @@ public class mikay extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(B6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(B7)
+                .addComponent(B7, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(49, Short.MAX_VALUE))
         );
+
+        jPanel4.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 140, 320));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 102, 102), new java.awt.Color(153, 153, 255), new java.awt.Color(102, 102, 102), new java.awt.Color(153, 153, 255)));
 
@@ -244,8 +248,10 @@ public class mikay extends javax.swing.JFrame {
                 .addComponent(NewSaltedCaramel)
                 .addGap(18, 18, 18)
                 .addComponent(NewDoubleDutch)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanel4.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 160, 320));
 
         jPanel3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(102, 102, 102), new java.awt.Color(153, 153, 255), new java.awt.Color(102, 102, 102), new java.awt.Color(153, 153, 255)));
 
@@ -271,7 +277,7 @@ public class mikay extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
+                .addContainerGap(47, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(P7, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(P6, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -305,6 +311,51 @@ public class mikay extends javax.swing.JFrame {
                 .addContainerGap(56, Short.MAX_VALUE))
         );
 
+        jPanel4.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, -1, 320));
+
+        Quantity.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Quantity.setText("1");
+        Quantity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QuantityActionPerformed(evt);
+            }
+        });
+        jPanel4.add(Quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 150, 50));
+
+        BB1.setText("TOTAL");
+        BB1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BB1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(BB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 138, 50));
+
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setText("CASH");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 430, -1, -1));
+
+        buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setText("CARD");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, -1, -1));
+
+        items.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "no add-ons", "sprinkles", "marshmallow" }));
+        items.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemsActionPerformed(evt);
+            }
+        });
+        jPanel4.add(items, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 390, 530, 30));
+
         Cart.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -318,108 +369,20 @@ public class mikay extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(Cart);
 
-        BB1.setText("ENTER");
-        BB1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BB1ActionPerformed(evt);
-            }
-        });
+        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, 530, 290));
 
-        Quantity.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Quantity.setText("1");
-        Quantity.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                QuantityActionPerformed(evt);
-            }
-        });
+        jLabel1.setFont(new java.awt.Font("Ravie", 3, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(153, 153, 255));
+        jLabel1.setText("MIKAY'S ICE CREAM HOUSE");
+        jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 510, 50));
 
-        items.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "no add-ons", "sprinkles", "marshmallow" }));
-        items.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemsActionPerformed(evt);
-            }
-        });
-
-        jRadioButton1.setText("CARD");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
-
-        jRadioButton2.setText("CASH");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 954, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(4, 4, 4)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(10, 10, 10)
-                                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(10, 10, 10)
-                                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(20, 20, 20)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(BB1, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(22, 22, 22)
-                                    .addComponent(Quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(170, 170, 170)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(items, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jRadioButton1)
-                                        .addComponent(jRadioButton2))))))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 465, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(4, 4, 4)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(10, 10, 10)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(BB1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(2, 2, 2)
-                            .addComponent(items, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(8, 8, 8)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jRadioButton1)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(20, 20, 20)
-                                    .addComponent(jRadioButton2)))))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1040, 680));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
-String selectedItem = items.getSelectedItem().toString();
+        String selectedItem = items.getSelectedItem().toString();
     String quant = Quantity.getText();
 
     try {
@@ -428,17 +391,22 @@ String selectedItem = items.getSelectedItem().toString();
         if (validation >= 1) {
             ProductName = B1.getText();
 
+            int basePrice;
             if (selectedItem.equals("sprinkles")) {
                 Id = "DARK CHOCOLATE + sprinkles";
+                basePrice = 50;
+            } else if (selectedItem.equals("marshmallow")) {
+                Id = "DARK CHOCOLATE + marshmallow";
+                basePrice = 50;
             } else {
                 Id = "DARK CHOCOLATE";
+                basePrice = 45; // fallback/default price
             }
 
-            int itemPrice = 45; // Fixed price per unit
             quantity = validation;
-            Total = itemPrice * quantity;
+            Total = basePrice * quantity;
 
-            model.addRow(new Object[]{ProductName, Id, itemPrice, quantity, Total});
+            model.addRow(new Object[]{ProductName, Id, basePrice, quantity, Total});
             Quantity.setText("1");
 
         } else {
@@ -466,12 +434,12 @@ String selectedItem = items.getSelectedItem().toString();
             if (selectedItem.equals("sprinkles")) {
                 Id = "COOKIES & CREAM + sprinkles";
                 basePrice = 50;
-            } else if (selectedItem.equals("")) {
+            } else if (selectedItem.equals("marshmallow")) {
                 Id = "COOKIES & CREAM + marshmallow";
-                basePrice = 45;
+                basePrice = 50;
             } else {
                 Id = "COOKIES & CREAM";
-                basePrice = 40; // default price if no match
+                basePrice = 45; // default price if no match
             }
 
             quantity = validation;
@@ -503,13 +471,13 @@ String selectedItem = items.getSelectedItem().toString();
             int basePrice;
             if (selectedItem.equals("sprinkles")) {
                 Id = "BUTTERSCOTCH + sprinkles";
-                basePrice = 45;
-            } else if (selectedItem.equals("")) {
+                basePrice = 50;
+            } else if (selectedItem.equals("marshmallow")) {
                 Id = "BUTTERSCOTCH + marshmallow";
-                basePrice = 45;
+                basePrice = 50;
             } else {
                 Id = "BUTTERSCOTCH";
-                basePrice = 40; // default fallback price
+                basePrice = 45; // default fallback price
             }
 
             quantity = validation;
@@ -542,13 +510,13 @@ String selectedItem = items.getSelectedItem().toString();
             int basePrice;
             if (selectedItem.equals("sprinkles")) {
                 Id = "VANILLA SWIRL + sprinkles";
-                basePrice = 50;
-            } else if (selectedItem.equals("")) {
+                basePrice = 55;
+            } else if (selectedItem.equals("marshmallow")) {
                 Id = "VANILLA SWIRL + marshmallow";
-                basePrice = 50;
+                basePrice = 55;
             } else {
                 Id = "VANILLA SWIRL";
-                basePrice = 45; // fallback/default price
+                basePrice = 50; // fallback/default price
             }
 
             quantity = validation;
@@ -570,49 +538,48 @@ String selectedItem = items.getSelectedItem().toString();
 
     private void B5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B5ActionPerformed
         // TODO add your handling code here:
-
-        SelectedItem = items.getSelectedItem().toString();
+        String selectedItem = items.getSelectedItem().toString();
         String quant = Quantity.getText();
-        int Validation = Integer.parseInt(quant);
-        if (SelectedItem.equals("sprinkles")) {
 
-            if (Validation >= 1) {
+        try {
+            int validation = Integer.parseInt(quant);
+
+            if (validation >= 1) {
                 ProductName = B5.getText();
-                Id = "STRAWBERRY DRIZZLE + sprinkles";
-                Price += 50;
-                quantity = Integer.parseInt(Quantity.getText());
-                Total = Price * quantity;
 
-                model.addRow(new Object[]{ProductName, Id, Price, quantity});
+                int basePrice;
+                if (selectedItem.equals("sprinkles")) {
+                    Id = "STRAWBERRY DRIZZLE + sprinkles";
+                    basePrice = 55;
+                } else if (selectedItem.equals("marshmallow")) {
+                    Id = "STRAWBERRY DRIZZLE + marshmallow";
+                    basePrice = 55;
+                } else {
+                    Id = "STRAWBERRY DRIZZLE";
+                    basePrice = 50; // fallback/default price
+                }
+
+                quantity = validation;
+                Total = basePrice * quantity;
+
+                model.addRow(new Object[]{ProductName, Id, basePrice, quantity, Total});
                 Quantity.setText("1");
+
             } else {
-                JOptionPane.showMessageDialog(null, "Inavalid Quantity!");
+                JOptionPane.showMessageDialog(null, "Invalid Quantity!");
                 Quantity.setText("1");
-
-            }
-        } else if (SelectedItem.equals("")) {
-
-            if (Validation >= 1) {
-                ProductName = B5.getText();
-                Id = "STRAWBERRY DRIZZLE + marshmallow";
-                Price += 50;
-                quantity = Integer.parseInt(Quantity.getText());
-                Total = Price * quantity;
-
-                model.addRow(new Object[]{ProductName, Id, Price, quantity, Total});
-                Quantity.setText("1");
-            } else {
-                JOptionPane.showMessageDialog(null, "Inavalid Quantity!");
-                Quantity.setText("1");
-
             }
 
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid number for quantity.");
+            Quantity.setText("1");
         }
-        
+
+
     }//GEN-LAST:event_B5ActionPerformed
 
     private void B6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B6ActionPerformed
-        String selectedItem = items.getSelectedItem().toString();
+         String selectedItem = items.getSelectedItem().toString();
     String quant = Quantity.getText();
 
     try {
@@ -620,14 +587,17 @@ String selectedItem = items.getSelectedItem().toString();
 
         if (validation >= 1) {
             ProductName = B6.getText();
-            int basePrice = Integer.parseInt(P6.getText());
 
+            int basePrice;
             if (selectedItem.equals("sprinkles")) {
                 Id = "SALTED CARAMEL + sprinkles";
-            } else if (selectedItem.equals("")) {
+                basePrice = 55;
+            } else if (selectedItem.equals("marshmallow")) {
                 Id = "SALTED CARAMEL + marshmallow";
+                basePrice = 55;
             } else {
                 Id = "SALTED CARAMEL";
+                basePrice = 50; // fallback/default price
             }
 
             quantity = validation;
@@ -649,38 +619,41 @@ String selectedItem = items.getSelectedItem().toString();
     }//GEN-LAST:event_B6ActionPerformed
 
     private void B7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B7ActionPerformed
-        SelectedItem = items.getSelectedItem().toString();
+         String selectedItem = items.getSelectedItem().toString();
     String quant = Quantity.getText();
-    int Validation = Integer.parseInt(quant);
 
-    if (SelectedItem.equals("sprinkles")) {
-        if (Validation >= 1) {
+    try {
+        int validation = Integer.parseInt(quant);
+
+        if (validation >= 1) {
             ProductName = B7.getText();
-            Id = "DOUBLE DUTCH + sprinkles";
-            Price = 50; // Set the correct base price here
-            quantity = Integer.parseInt(Quantity.getText());
-            Total = Price * quantity;
 
-            model.addRow(new Object[]{ProductName, Id, Price, quantity, Total});
+            int basePrice;
+            if (selectedItem.equals("sprinkles")) {
+                Id = "DOUBLE DUTCH + sprinkles";
+                basePrice = 55;
+            } else if (selectedItem.equals("marshmallow")) {
+                Id = "DOUBLE DUTCH + marshmallow";
+                basePrice = 55;
+            } else {
+                Id = "DOUBLE DUTCH";
+                basePrice = 50; // fallback/default price
+            }
+
+            quantity = validation;
+            Total = basePrice * quantity;
+
+            model.addRow(new Object[]{ProductName, Id, basePrice, quantity, Total});
             Quantity.setText("1");
+
         } else {
             JOptionPane.showMessageDialog(null, "Invalid Quantity!");
             Quantity.setText("1");
         }
-    } else if (SelectedItem.equals("")) {
-        if (Validation >= 1) {
-            ProductName = B7.getText();
-            Id = "DOUBLE DUTCH + marshmallow";
-            Price = 50; // Set the correct base price here
-            quantity = Integer.parseInt(Quantity.getText());
-            Total = Price * quantity;
 
-            model.addRow(new Object[]{ProductName, Id, Price, quantity, Total});
-            Quantity.setText("1");
-        } else {
-            JOptionPane.showMessageDialog(null, "Invalid Quantity!");
-            Quantity.setText("1");
-        }
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(null, "Please enter a valid number for quantity.");
+        Quantity.setText("1");
     }
     }//GEN-LAST:event_B7ActionPerformed
 
@@ -781,6 +754,7 @@ String selectedItem = items.getSelectedItem().toString();
     private javax.swing.JLabel P6;
     private javax.swing.JLabel P7;
     private javax.swing.JTextField Quantity;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> items;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -789,6 +763,7 @@ String selectedItem = items.getSelectedItem().toString();
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
